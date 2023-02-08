@@ -10,15 +10,7 @@ print(author)
 # F = (9/5)*C + 32
 places = [('Nashua',32),("Boston",12),("Los Angelos",44),("Miami",29)]
 
-names = []
-degree = []
-
-for place in places:
-    names.append(place[0])
-    degree.append(place[-1])   
-
-
-finished = list(map((lambda name, degree: (name, degree*(9/5)+32)), names, degree))
+finished = list(map((lambda place: (place[0], place[-1]*(9/5)+32)), places))
 
 print(finished)
 
